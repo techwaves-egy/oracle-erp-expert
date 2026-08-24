@@ -1,5 +1,17 @@
 # Production Change Advisory Board (CAB) Request Form
 
+<p align="center">
+  <img src="../assets/techwaves_egy_logo.png" alt="Techwaves EGY Logo" width="220"/>
+</p>
+
+<p align="center">
+  <strong>Techwaves EGY</strong><br/>
+  <em>SOLUTIONS • INNOVATION • SUCCESS</em><br/>
+  Contact: <a href="mailto:info@techwaves-egy.com">info@techwaves-egy.com</a>
+</p>
+
+---
+
 **Change Reference**: `CR-<YYYYMMDD>-<SERVICE_ID>`  
 **Date of Submission**: `[Date]`  
 **Lead Oracle Architect / Requestor**: `[Name / CoE Lead]`  
@@ -59,6 +71,6 @@ If any validation fails or unexpected errors occur before cutover completion:
 ---
 
 ## 7. Sign-off & Approvals
-- **Lead Oracle Architect**: `[Approved]`
+- **Lead Oracle Architect (Techwaves EGY)**: `[Approved]`
 - **Head of Infrastructure / DBA Lead**: `[Approved]`
 - **Business Process Owner**: `[Approved]`

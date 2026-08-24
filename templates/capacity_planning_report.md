@@ -1,5 +1,17 @@
 # Enterprise Oracle Database & Storage Capacity Planning Report
 
+<p align="center">
+  <img src="../assets/techwaves_egy_logo.png" alt="Techwaves EGY Logo" width="220"/>
+</p>
+
+<p align="center">
+  <strong>Techwaves EGY</strong><br/>
+  <em>SOLUTIONS • INNOVATION • SUCCESS</em><br/>
+  Contact: <a href="mailto:info@techwaves-egy.com">info@techwaves-egy.com</a>
+</p>
+
+---
+
 **Document Reference**: `CAP-<YYYYMMDD>-<TARGET_SYSTEM>`  
 **Date of Report**: `[Date]`  
 **Capacity Planning Lead**: `[Name / Capacity Planning Expert]`  

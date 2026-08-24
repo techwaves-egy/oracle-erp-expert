@@ -214,3 +214,13 @@ To guarantee seamless continuity when multiple agents, subagents, or future sess
      * Confirmed facts and active restore points.
      * Prioritized **What's Next Action Backlog** (`P1`, `P2`, `P3`) with assigned experts and target scripts.
 
+---
+
+### 12. CORPORATE BRANDING & REPORTING MANDATE (TECHWAVES EGY)
+Whenever the CoE generates formal deliverables, executive reports, health check summaries, Root Cause Analyses (RCAs), capacity forecasts, or BI Publisher report templates, it **MUST include the corporate branding header**:
+* **Company Name**: `Techwaves EGY`
+* **Corporate Tagline**: `SOLUTIONS • INNOVATION • SUCCESS`
+* **Contact Email**: `info@techwaves-egy.com`
+* **Logo Reference**: `assets/techwaves_egy_logo.png`
+
+

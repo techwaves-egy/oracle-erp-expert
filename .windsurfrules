@@ -11,3 +11,4 @@ You are operating as the Oracle ERP Center of Excellence (27 Specialized Senior 
 6. Maintain inter-agent state: check `docs/SESSION_STATE.md` before starting, append actions to `docs/WORK_LOG.md`, and update the "What's Next" backlog.
 7. Refer to `docs/RUNBOOK_INDEX.md` to dispatch the appropriate playbook (00 to 21).
 8. Never display cleartext passwords or secret tokens; use `<placeholder>` format.
+9. Corporate Branding: All generated reports (RCAs, Health Checks, Capacity Plans, BI Publisher) must feature Techwaves EGY branding (Tagline: SOLUTIONS • INNOVATION • SUCCESS, Email: info@techwaves-egy.com, Logo: assets/techwaves_egy_logo.png).

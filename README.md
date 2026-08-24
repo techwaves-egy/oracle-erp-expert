@@ -1,10 +1,21 @@
-# Oracle ERP & Database Center of Excellence (CoE)
+<p align="center">
+  <img src="assets/techwaves_egy_logo.png" alt="Techwaves EGY Logo" width="280"/>
+</p>
 
-[![Oracle EBS](https://img.shields.io/badge/Oracle%20EBS-R12.1%20%7C%20R12.2-blue.svg)](https://www.oracle.com/applications/ebs/)
-[![Oracle Database](https://img.shields.io/badge/Oracle%20Database-11g%20%7C%2012c%20%7C%2019c%20%7C%2023ai-red.svg)](https://www.oracle.com/database/)
-[![Multi-Agent](https://img.shields.io/badge/Architecture-27%20Specialized%20Experts-success.svg)](#-the-27-expert-council)
-[![Universal AI Agent](https://img.shields.io/badge/Agent%20Support-Antigravity%20%7C%20Claude%20%7C%20Cursor%20%7C%20Windsurf%20%7C%20OpenAI-orange.svg)](#-universal-agent-installation--setup)
-[![License](https://img.shields.io/badge/License-EULA-lightgrey.svg)](EULA.md)
+<h1 align="center">Oracle ERP &amp; Database Center of Excellence (CoE)</h1>
+
+<p align="center">
+  <strong>Techwaves EGY</strong> — <em>SOLUTIONS • INNOVATION • SUCCESS</em><br/>
+  Contact: <a href="mailto:info@techwaves-egy.com">info@techwaves-egy.com</a>
+</p>
+
+<p align="center">
+  <a href="https://www.oracle.com/applications/ebs/"><img src="https://img.shields.io/badge/Oracle%20EBS-R12.1%20%7C%20R12.2-blue.svg" alt="Oracle EBS"/></a>
+  <a href="https://www.oracle.com/database/"><img src="https://img.shields.io/badge/Oracle%20Database-11g%20%7C%2012c%20%7C%2019c%20%7C%2023ai-red.svg" alt="Oracle Database"/></a>
+  <a href="#-the-27-expert-council"><img src="https://img.shields.io/badge/Architecture-27%20Specialized%20Experts-success.svg" alt="Architecture"/></a>
+  <a href="#-universal-agent-installation--setup"><img src="https://img.shields.io/badge/Agent%20Support-Antigravity%20%7C%20Claude%20%7C%20Cursor%20%7C%20Windsurf%20%7C%20OpenAI-orange.svg" alt="Agent Support"/></a>
+  <a href="EULA.md"><img src="https://img.shields.io/badge/License-EULA-lightgrey.svg" alt="License"/></a>
+</p>
 
 An enterprise-grade, multi-agent AI skill and operational framework designed to manage, troubleshoot, optimize, patch, upgrade, migrate, and automate **Oracle E-Business Suite (R12.1.3 / R12.2.x)** and **Oracle Database (11g / 12c / 19c / 23ai)** across high-availability architectures (RAC, ASM, Data Guard, Exadata, and OCI Cloud).
 
@@ -210,3 +221,15 @@ This project is governed by the **End User License Agreement (EULA)** detailed i
 
 * **License Overview**: Permitted for enterprise internal operations, multi-agent AI integrations, custom playbook extensions, and automated DBA routines.
 * **Disclaimer**: Provided "AS IS" without warranty of any kind. Independent framework not affiliated with or endorsed by Oracle Corporation.
+
+---
+
+## 🏢 Corporate Contact & Enterprise Support
+
+<p align="center">
+  <strong>Techwaves EGY</strong><br/>
+  <em>SOLUTIONS • INNOVATION • SUCCESS</em><br/>
+  📧 Email: <a href="mailto:info@techwaves-egy.com">info@techwaves-egy.com</a><br/>
+  🌐 Organization: <a href="https://github.com/Techwaves-egy">Techwaves-egy</a>
+</p>
+

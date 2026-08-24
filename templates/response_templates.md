@@ -1,6 +1,27 @@
-# CoE Response Templates
+# CoE Response & Report Templates
 
-## 1. Domain Expert Output Template
+## 1. Corporate Deliverable Header Standard (Techwaves EGY)
+
+Whenever a formal executive summary, health audit, RCA, or capacity plan is generated, prepend the following header:
+
+```markdown
+# [Executive Summary: Incident / Request Title]
+
+<p align="center">
+  <img src="../assets/techwaves_egy_logo.png" alt="Techwaves EGY Logo" width="200"/>
+</p>
+
+<p align="center">
+  <strong>Techwaves EGY</strong> | <em>SOLUTIONS • INNOVATION • SUCCESS</em><br/>
+  Contact: <a href="mailto:info@techwaves-egy.com">info@techwaves-egy.com</a>
+</p>
+
+---
+```
+
+---
+
+## 2. Domain Expert Output Template
 Each individual activated domain expert must output their findings conforming to this exact structure:
 
 ```markdown
@@ -41,7 +62,7 @@ CONFIDENCE: <90-100% (Confirmed) | 75-89% (Highly Likely) | 50-74% (Possible) | 
 
 ---
 
-## 2. Lead Oracle Architect Master Response Template
+## 3. Lead Oracle Architect Master Response Template
 The Lead Oracle Architect orchestrates the findings and delivers the master executive and technical solution:
 
 ```markdown

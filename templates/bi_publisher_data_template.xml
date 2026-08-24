@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ============================================================================== -->
 <!-- Oracle BI Publisher (XML Publisher) Enterprise Data Template                    -->
+<!-- Organization: Techwaves EGY (SOLUTIONS • INNOVATION • SUCCESS)                 -->
+<!-- Contact: info@techwaves-egy.com                                                -->
 <!-- Application: Oracle E-Business Suite R12.1 / R12.2                             -->
 <!-- Purpose: High-performance, scalable XML data extraction for EBS reports        -->
 <!-- ============================================================================== -->
-<dataTemplate name="XX_FIN_AR_INVOICE_REPORT" description="Custom AR Invoice & Customer Summary Report" dataSourceRef="" defaultPackage="XX_AR_REPORT_PKG" version="1.0">
+<dataTemplate name="XX_FIN_AR_INVOICE_REPORT" description="Custom AR Invoice &amp; Customer Summary Report" dataSourceRef="" defaultPackage="XX_AR_REPORT_PKG" version="1.0">
+    <properties>
+        <property name="company_name" value="Techwaves EGY"/>
+        <property name="company_tagline" value="SOLUTIONS • INNOVATION • SUCCESS"/>
+        <property name="company_email" value="info@techwaves-egy.com"/>
+    </properties>
+
     <parameters>
         <parameter name="P_ORG_ID" dataType="number" defaultValue="204"/>
         <parameter name="P_FROM_DATE" dataType="date"/>
@@ -32,6 +40,17 @@
     </lexicals>
 
     <dataQuery>
+        <sqlStatement name="Q_COMPANY_HEADER">
+            <![CDATA[
+            SELECT 
+                'Techwaves EGY' AS comp_name,
+                'SOLUTIONS • INNOVATION • SUCCESS' AS comp_tagline,
+                'info@techwaves-egy.com' AS comp_email,
+                TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS') AS execution_time
+            FROM dual
+            ]]>
+        </sqlStatement>
+
         <sqlStatement name="Q_HEADER">
             <![CDATA[
             SELECT 
@@ -81,6 +100,13 @@
     </dataQuery>
 
     <dataStructure>
+        <group name="G_COMPANY" source="Q_COMPANY_HEADER">
+            <element name="COMP_NAME" value="COMP_NAME"/>
+            <element name="COMP_TAGLINE" value="COMP_TAGLINE"/>
+            <element name="COMP_EMAIL" value="COMP_EMAIL"/>
+            <element name="EXECUTION_TIME" value="EXECUTION_TIME"/>
+        </group>
+
         <group name="G_HEADER" source="Q_HEADER">
             <element name="OPERATING_UNIT" value="OPERATING_UNIT"/>
             <element name="CUSTOMER_NAME" value="CUSTOMER_NAME"/>
