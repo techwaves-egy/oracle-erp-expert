@@ -2,9 +2,29 @@
   "$schema": "https://json.schemastore.org/skills.json",
   "skills": [
     {
-      "name": "oracle-erp-database-expert",
-      "description": "Enterprise Oracle ERP, E-Business Suite (EBS R12.1/R12.2), Oracle Database (11g/12c/19c/23ai), RAC, ASM, Data Guard, WebLogic, ADOP, Concurrent Processing, and Infrastructure Center of Excellence.",
-      "path": "skills/oracle-erp-database-expert/SKILL.md"
+      "name": "oracle",
+      "description": "Activate the Oracle ERP & Database Center of Excellence (CoE) led by the Lead Oracle Architect.",
+      "path": ".agents/skills/oracle/SKILL.md"
+    },
+    {
+      "name": "oracle-health",
+      "description": "Execute a comprehensive 9-layer Oracle ERP & Database Health Check and Audit under Techwaves EGY.",
+      "path": ".agents/skills/oracle-health/SKILL.md"
+    },
+    {
+      "name": "oracle-triage",
+      "description": "Rapid incident triage for Oracle Database hangs, blocking locks, 100% CPU, and EBS login/access failures.",
+      "path": ".agents/skills/oracle-triage/SKILL.md"
+    },
+    {
+      "name": "oracle-report",
+      "description": "Generate executive reports, Root Cause Analyses (RCA), capacity forecasts, or BI Publisher templates.",
+      "path": ".agents/skills/oracle-report/SKILL.md"
+    },
+    {
+      "name": "oracle-upgrade",
+      "description": "Plan, configure, and execute Oracle Database 19c/23ai upgrades, EBS 12.2 modernization, and OCI migrations.",
+      "path": ".agents/skills/oracle-upgrade/SKILL.md"
     }
   ]
 }
