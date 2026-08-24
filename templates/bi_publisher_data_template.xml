@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================================== -->
+<!-- Oracle BI Publisher (XML Publisher) Enterprise Data Template                    -->
+<!-- Application: Oracle E-Business Suite R12.1 / R12.2                             -->
+<!-- Purpose: High-performance, scalable XML data extraction for EBS reports        -->
+<!-- ============================================================================== -->
+<dataTemplate name="XX_FIN_AR_INVOICE_REPORT" description="Custom AR Invoice & Customer Summary Report" dataSourceRef="" defaultPackage="XX_AR_REPORT_PKG" version="1.0">
+    <parameters>
+        <parameter name="P_ORG_ID" dataType="number" defaultValue="204"/>
+        <parameter name="P_FROM_DATE" dataType="date"/>
+        <parameter name="P_TO_DATE" dataType="date"/>
+        <parameter name="P_CUSTOMER_ID" dataType="number"/>
+        <parameter name="P_STATUS" dataType="character" defaultValue="ALL"/>
+    </parameters>
+
+    <lexicals>
+        <lexical type="oracle.apps.fnd.flex.kff.select"
+                 name="FLEX_GL_ACCOUNT"
+                 comment="GL Account Flexfield"
+                 appl_short_name="SQLGL"
+                 flex_code="GL#"
+                 structure_num="101"
+                 alias="gcc"/>
+        <lexical type="oracle.apps.fnd.flex.kff.where"
+                 name="FLEX_GL_WHERE"
+                 appl_short_name="SQLGL"
+                 flex_code="GL#"
+                 structure_num="101"
+                 segments="ALL"
+                 operator="="
+                 operand="100"/>
+    </lexicals>
+
+    <dataQuery>
+        <sqlStatement name="Q_HEADER">
+            <![CDATA[
+            SELECT 
+                hou.name AS operating_unit,
+                hp.party_name AS customer_name,
+                hca.account_number AS customer_number,
+                trx.customer_trx_id,
+                trx.trx_number AS invoice_number,
+                trx.trx_date AS invoice_date,
+                trx.invoice_currency_code AS currency,
+                NVL(gd.amount, 0) AS total_amount,
+                trx.status_trx AS invoice_status,
+                TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS') AS report_execution_date
+            FROM ra_customer_trx_all trx
+            JOIN hr_operating_units hou ON trx.org_id = hou.organization_id
+            JOIN hz_cust_accounts hca ON trx.bill_to_customer_id = hca.cust_account_id
+            JOIN hz_parties hp ON hca.party_id = hp.party_id
+            LEFT JOIN ra_cust_trx_gl_dist_all gd 
+                   ON trx.customer_trx_id = gd.customer_trx_id 
+                  AND gd.account_class = 'REC' 
+                  AND gd.latest_rec_flag = 'Y'
+            WHERE trx.org_id = NVL(:P_ORG_ID, trx.org_id)
+              AND trx.trx_date BETWEEN NVL(:P_FROM_DATE, TO_DATE('1900-01-01', 'YYYY-MM-DD')) 
+                                  AND NVL(:P_TO_DATE, SYSDATE)
+              AND (hca.cust_account_id = :P_CUSTOMER_ID OR :P_CUSTOMER_ID IS NULL)
+              AND (trx.status_trx = :P_STATUS OR :P_STATUS = 'ALL')
+            ORDER BY trx.trx_date DESC, trx.trx_number ASC
+            ]]>
+        </sqlStatement>
+
+        <sqlStatement name="Q_LINES">
+            <![CDATA[
+            SELECT 
+                line.customer_trx_id,
+                line.customer_trx_line_id,
+                line.line_number,
+                line.description AS item_description,
+                line.quantity_invoiced AS quantity,
+                line.unit_selling_price AS unit_price,
+                line.extended_amount AS line_amount
+            FROM ra_customer_trx_lines_all line
+            WHERE line.customer_trx_id = :CUSTOMER_TRX_ID
+              AND line.line_type = 'LINE'
+            ORDER BY line.line_number ASC
+            ]]>
+        </sqlStatement>
+    </dataQuery>
+
+    <dataStructure>
+        <group name="G_HEADER" source="Q_HEADER">
+            <element name="OPERATING_UNIT" value="OPERATING_UNIT"/>
+            <element name="CUSTOMER_NAME" value="CUSTOMER_NAME"/>
+            <element name="CUSTOMER_NUMBER" value="CUSTOMER_NUMBER"/>
+            <element name="CUSTOMER_TRX_ID" value="CUSTOMER_TRX_ID"/>
+            <element name="INVOICE_NUMBER" value="INVOICE_NUMBER"/>
+            <element name="INVOICE_DATE" value="INVOICE_DATE"/>
+            <element name="CURRENCY" value="CURRENCY"/>
+            <element name="TOTAL_AMOUNT" value="TOTAL_AMOUNT"/>
+            <element name="INVOICE_STATUS" value="INVOICE_STATUS"/>
+            <element name="REPORT_EXECUTION_DATE" value="REPORT_EXECUTION_DATE"/>
+            
+            <group name="G_LINES" source="Q_LINES">
+                <element name="LINE_NUMBER" value="LINE_NUMBER"/>
+                <element name="ITEM_DESCRIPTION" value="ITEM_DESCRIPTION"/>
+                <element name="QUANTITY" value="QUANTITY"/>
+                <element name="UNIT_PRICE" value="UNIT_PRICE"/>
+                <element name="LINE_AMOUNT" value="LINE_AMOUNT"/>
+            </group>
+        </group>
+    </dataStructure>
+</dataTemplate>

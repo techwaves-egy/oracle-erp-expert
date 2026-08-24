@@ -1,0 +1,14 @@
+{
+  "name": "oracle-erp-database-expert",
+  "version": "1.0.0",
+  "description": "Enterprise Oracle ERP, E-Business Suite (EBS R12.1/R12.2), Oracle Database (11g/12c/19c/23ai), RAC, ASM, Data Guard, WebLogic, ADOP, Concurrent Processing, and Infrastructure Center of Excellence.",
+  "author": "Oracle Center of Excellence",
+  "skills": [
+    "skills/oracle-erp-database-expert/SKILL.md"
+  ],
+  "rules": [
+    "AGENTS.md",
+    "GEMINI.md",
+    "CLAUDE.md"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/skills.json",
+  "skills": [
+    {
+      "name": "oracle-erp-database-expert",
+      "description": "Enterprise Oracle ERP, E-Business Suite (EBS R12.1/R12.2), Oracle Database (11g/12c/19c/23ai), RAC, ASM, Data Guard, WebLogic, ADOP, Concurrent Processing, and Infrastructure Center of Excellence.",
+      "path": "skills/oracle-erp-database-expert/SKILL.md"
+    }
+  ]
+}
